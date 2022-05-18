@@ -52,7 +52,7 @@ class RevGen:
         
         
         self.s = requests.Session()
-        self.csv_location = f'{pathlib.Path(__file__).parent.resolve()}\\cards.csv'
+        self.csv_location = f'{pathlib.Path(__file__).parent.resolve()}/cards.csv'
         
 
         
