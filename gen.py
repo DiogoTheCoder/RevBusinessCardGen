@@ -59,8 +59,8 @@ class RevGen:
         self.business_id = self.get_business()
         if not self.business_id:
             raise RuntimeError("Cannot Get Business API")
-        if self.kyc_status != "PASSED":
-            raise RuntimeError("Account Unverified")
+        # if self.kyc_status != "PASSED":
+        #     raise RuntimeError("Account Unverified")
         
         self.BASE_URL = config.BASE_URL + f"business/{self.business_id}"
         
@@ -178,7 +178,7 @@ class RevGen:
         
         self.log_info("Labeling Card")   
         
-        payload = {"label": f"{config.CARD_PREFIX} {prefix}"} 
+        payload = {"label": f"{config.CARD_PREFIX}{prefix}"}
 
         self.card_name = f"{config.CARD_PREFIX}{prefix}"
 
